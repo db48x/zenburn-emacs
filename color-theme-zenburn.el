@@ -54,10 +54,10 @@
 ;; colors with +x are lighter, colors with -x are darker
 (defvar zenburn-fg "#dcdccc")
 (defvar zenburn-fg-1 "#656555")
-(defvar zenburn-bg-1 "#2b2b2b")
-(defvar zenburn-bg "#3f3f3f")
-(defvar zenburn-bg+1 "#4f4f4f")
-(defvar zenburn-bg+2 "#5f5f5f")
+(defvar zenburn-bg-1 "#000000")
+(defvar zenburn-bg "#0f0f0f")
+(defvar zenburn-bg+1 "#1f1f1f")
+(defvar zenburn-bg+2 "#3f3f3f")
 (defvar zenburn-red+1 "#dca3a3")
 (defvar zenburn-red "#cc9393")
 (defvar zenburn-red-1 "#bc8383")
@@ -104,10 +104,10 @@
       (cursor-color . ,zenburn-fg))
 
      ;;; define some reusable zenburn faces that we can inherit from afterwards
-     (zenburn-strong-1-face ((t (:foreground ,zenburn-yellow :weight bold))))
-     (zenburn-strong-2-face ((t (:foreground ,zenburn-orange :weight bold))))
-     (zenburn-warning-face ((t (:foreground ,zenburn-yellow-1 :weight bold :underline t))))
-     (zenburn-error-face ((t (:foreground ,zenburn-red-1 :weight bold :underline t))))
+     (zenburn-strong-1-face ((t (:foreground ,zenburn-yellow-1 :weight bold))))
+     (zenburn-strong-2-face ((t (:foreground ,zenburn-yellow-2 :weight bold))))
+     (zenburn-warning-face ((t (:weight bold :underline t))))
+     (zenburn-error-face ((t (:foreground ,zenburn-red+1 :weight bold :underline t))))
 
      ;;; basic coloring
      (default ((t (:foreground ,zenburn-fg))))
@@ -150,17 +150,17 @@
      (mode-line-buffer-id ((t (:inherit zenburn-strong-1-face))))
      (mode-line-inactive
       ((t (:foreground ,zenburn-green-1  :background ,zenburn-bg-1))))
-     (region ((t (:background ,zenburn-bg-1))))
+     (region ((t (:background ,zenburn-bg+1))))
      (secondary-selection ((t (:background ,zenburn-bg+2))))
      (trailing-whitespace ((t (:background ,zenburn-red))))
      (vertical-border ((t (:foreground ,zenburn-fg))))
 
      ;;; font lock
      (font-lock-builtin-face ((t (:foreground ,zenburn-blue))))
-     (font-lock-comment-face ((t (:foreground ,zenburn-green))))
-     (font-lock-comment-delimiter-face ((t (:foreground ,zenburn-green))))
+     (font-lock-comment-face ((t (:foreground ,zenburn-green-1))))
+     (font-lock-comment-delimiter-face ((t (:foreground ,zenburn-green-1))))
      (font-lock-constant-face ((t (:foreground ,zenburn-green+4))))
-     (font-lock-doc-face ((t (:foreground ,zenburn-green+1))))
+     (font-lock-doc-face ((t (:foreground ,zenburn-green))))
      (font-lock-doc-string-face ((t (:foreground ,zenburn-blue+1))))
      (font-lock-function-name-face ((t (:foreground ,zenburn-blue))))
      (font-lock-keyword-face ((t (:inherit zenburn-strong-1-face))))
