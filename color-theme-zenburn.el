@@ -168,7 +168,7 @@
      (font-lock-preprocessor-face ((t (:foreground ,zenburn-blue))))
      (font-lock-string-face ((t (:foreground ,zenburn-red))))
      (font-lock-type-face ((t (:foreground ,zenburn-blue))))
-     (font-lock-variable-name-face ((t (:foreground ,zenburn-orange))))
+     (font-lock-variable-name-face ((t (:foreground ,zenburn-blue+1))))
      (font-lock-warning-face ((t (:inherit zenburn-warning-face))))
 
      (c-annotation-face ((t (:inherit font-lock-constant-face))))

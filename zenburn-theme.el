@@ -51,11 +51,11 @@
       ;; colors with +x are lighter, colors with -x are darker
       (zenburn-fg "#dcdccc")
       (zenburn-fg-1 "#656555")
-      (zenburn-bg-1 "#2b2b2b")
-      (zenburn-bg-05 "#383838")
-      (zenburn-bg "#3f3f3f")
-      (zenburn-bg+1 "#4f4f4f")
-      (zenburn-bg+2 "#5f5f5f")
+      (zenburn-bg-1 "#0b0b0b")
+      (zenburn-bg-05 "#080808")
+      (zenburn-bg "#1f1f1f")
+      (zenburn-bg+1 "#3f3f3f")
+      (zenburn-bg+2 "#4f4f4f")
       (zenburn-red+1 "#dca3a3")
       (zenburn-red "#cc9393")
       (zenburn-red-1 "#bc8383")
@@ -90,11 +90,11 @@
    ;;; define some reusable zenburn faces that we can inherit from afterwards
    `(zenburn-strong-1-face ((,class (:foreground ,zenburn-yellow :weight bold))))
    `(zenburn-strong-2-face ((,class (:foreground ,zenburn-orange :weight bold))))
-   `(zenburn-warning-face ((,class (:foreground ,zenburn-yellow-1 :weight bold :underline t))))
+   `(zenburn-warning-face ((,class (:weight bold :underline ,zenburn-orange))))
    `(zenburn-error-face ((,class (:foreground ,zenburn-red-1 :weight bold :underline t))))
 
    ;;; basic coloring
-   `(default ((,class (:foreground ,zenburn-fg :background ,zenburn-bg))))
+   `(default ((,class (:foreground ,zenburn-fg :background "#000000"))))
    `(cursor ((,class (:foreground ,zenburn-fg))))
    `(escape-glyph-face ((,class (:foreground ,zenburn-red))))
    `(fringe ((,class (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
@@ -139,17 +139,17 @@
      ((,class (:foreground ,zenburn-green-1
                            :background ,zenburn-bg-05
                            :box (:line-width -1 :style released-button)))))
-   `(region ((,class (:background ,zenburn-bg-1))))
+   `(region ((,class (:background ,zenburn-bg+1))))
    `(secondary-selection ((,class (:background ,zenburn-bg+2))))
    `(trailing-whitespace ((,class (:background ,zenburn-red))))
    `(vertical-border ((,class (:foreground ,zenburn-fg))))
 
    ;;; font lock
    `(font-lock-builtin-face ((,class (:foreground ,zenburn-blue))))
-   `(font-lock-comment-face ((,class (:foreground ,zenburn-green))))
-   `(font-lock-comment-delimiter-face ((,class (:foreground ,zenburn-green))))
+   `(font-lock-comment-face ((,class (:foreground ,zenburn-green-1))))
+   `(font-lock-comment-delimiter-face ((,class (:foreground ,zenburn-green-1))))
    `(font-lock-constant-face ((,class (:foreground ,zenburn-green+4))))
-   `(font-lock-doc-face ((,class (:foreground ,zenburn-green+1))))
+   `(font-lock-doc-face ((,class (:foreground ,zenburn-green))))
    `(font-lock-doc-string-face ((,class (:foreground ,zenburn-blue+1))))
    `(font-lock-function-name-face ((,class (:foreground ,zenburn-blue))))
    `(font-lock-keyword-face ((,class (:foreground ,zenburn-yellow :weight bold))))
@@ -458,7 +458,21 @@
    `(wl-highlight-summary-displaying-face ((,class (:underline t :weight bold))))
    
    ;; which-func-mode
-   `(which-func ((,class (:foreground ,zenburn-green+1))))))
+   `(which-func ((,class (:foreground ,zenburn-green+1))))
+
+   `(js2-error-face ((,class (:inherit zenburn-error-face))))
+   `(js2-external-variable-face ((t (:foreground ,zenburn-orange))))
+   `(js2-function-param-face ((,class (:foreground ,zenburn-green+4))))
+   `(js2-instance-member-face)
+   `(js2-jsdoc-html-tag-delimiter-face ((,class (:foreground ,zenburn-green))))
+   `(js2-jsdoc-html-tag-name-face ((,class (:foreground ,zenburn-yellow))))
+   `(js2-jsdoc-tag-face ((,class (:foreground ,zenburn-green-1))))
+   `(js2-jsdoc-type-face ((,class (:foreground ,zenburn-green+2))))
+   `(js2-jsdoc-value-face ((,class (:foreground ,zenburn-green+4))))
+   ;`(js2-magic-paren-face)
+   ;`(js2-private-function-call-face)
+   ;`(js2-private-member-face)
+   `(js2-warning-face ((,class (:underline ,zenburn-orange))))))
 
 (custom-theme-set-variables
  'zenburn
